@@ -64,9 +64,12 @@ chrome.net目前可以实现以下效果：
 ## 开发环境
   
 ### Visual Studio 2017
-- add Microsoft.VisualStudio.Workload.NativeDesktop
-- add Microsoft.VisualStudio.Component.VC.ATLMFC
-- add Microsoft.VisualStudio.Component.Windows10SDK.15063.Desktop
+- add .NET desktop development
+   - add Visual C++ ATL for x86 and x64
+   - add Visual C++ MFC for x86 and x64
+   - add C++/CLI support
+- add Desktop development with C++
+- add Visual Studio extension development
 - add Microsoft.VisualStudio.Component.VC.140
 
 ### depot_tools
