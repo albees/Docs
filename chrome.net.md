@@ -4,6 +4,7 @@ chrome.net是基于tangram技术实现的chrome扩展应用,它将桌面应用�
 
 为什么选择chromium浏览器来做这个结合？
 
+
 ## chrome浏览器的现状
 
 Google Chrome是Google开发的免费网络浏览器。目前在全世界浏览器市场占有率中是最多的，可以说是目前世界上最好的浏览器。
@@ -13,8 +14,9 @@ Chrome代码是基于其他开放源代码软件所编写，包括Apple WebKit�
 
 截至2018年8月，全球浏览器市场份额排名如下：
 
+
 |排名|推荐|比重|
-| --- | - ：| --- |
+|---|-|---|
 | 1 |谷歌的Chrome浏览器| 67.63％|
 | 2 | Mozilla Firefoxr | 10.97％|
 | 3 |微软的IE浏览器| 7.02％|
@@ -42,10 +44,10 @@ chrome.net目前可以实现以下效果：
 由于chromium源码超过10GB，是一个巨大的项目，80%的人可能都没见过如此大胆的项目，通常来说，在vs中加载四五十个工程文件就已经很大了，但chromium源代码有六千多个工程，几乎是无法阅读的。面对如此庞大的项目，硬件资源是一个大问题，如果没有足够的硬件资源，那么要花费您很长的时间进行编译。为此我们结合自己在此工作过程中的经验建议下面的几种硬件配置。
 1. 个人开发最低配置
 1台电脑，配置如下：
-   - 64位Intel机器，至少8GB RAM。 强烈推荐超过16GB
-   - c盘至少有600G的空间
-   - 适当版本的Visual Studio
-   - Windows 10
+- 64位Intel机器，至少8GB RAM。 强烈推荐超过16GB
+- c盘至少有600G的空间
+- 适当版本的Visual Studio
+- Windows 10
 
 2. 个人开发的合理配置：
 2台机器，1台用于更新chromium源码，1台用于工作，两台交替工作。每台配置都如下所述：
@@ -54,7 +56,7 @@ chrome.net目前可以实现以下效果：
 - 适当版本的Visual Studio
 - Windows 10
            
-3.一个6人团队开发的合理配置：
+3. 一个6人团队开发的合理配置：
 - 4台服务器 
 - 6台个人电脑 
 - 每台配置都如2所述 
@@ -74,14 +76,24 @@ chrome.net目前可以实现以下效果：
 若您所在地区无法连接chromium源码地址，则需要提前处理网络代理问题，若您不想处理此部分，中国区用户可从连接地址获取chromium源码。
 
 ## 特别提示
-由于chromium源码的体积太大，下载源码和编译都需要很长的时间，下面是我们在工作中不同设备的时长统计，供大家参考.
+### 工作时长
+由于chromium源码的体积太大，首次下载源码和编译都需要很长的时间（一般配置的话在20小时左右），建议大家将下载和编译都放在晚上睡觉前或周末不用电脑时进行。
+
+下面是我们在工作中不同设备的时长统计，供大家参考.
+
+|设备名|配置|编译所用时长|
+|---|-|---|
+|联想台式机|Inter Core i5-3470 CPU;8G RAM; 64-bit system; NTFS-formatted hard drive 1T|22h|
+|Surface Book 2|8代酷睿 i7/16GB/1TB/GTX 1060 6GB|16h|
+|Dell PowerEdge R710 rack server|16 CPU cores, 128GB of memory, and six 16,000-rpm mechanical hard drives|15h|
+
+# 开始扩展
+- [chromium](https://chromium.googlesource.com/chromium/src.git)
+   - Fetches code via `depot_tools`.
+   - sets the branch for Chromium (ex: 70.0.3538.77).
+- [tangram](https://github.com/tangarm/Tangram)
+   - Mounted at `src\tangram`.
+- 
+   
 
 
-|设备名|配置|下载所用时长|编译所用时长|
-| --- | - ：| --- |--- |
-| 联想扬天A8000t |谷歌的Chrome浏览器| 67.63％|
-| 2 | Mozilla Firefoxr | 10.97％|
-| 3 |微软的IE浏览器| 7.02％|
-| 4 | Apple的Safari浏览器| 5.13％|
-| 5 | Microsoft的Edge浏览器| 4.24％|
-| 6 | Opera浏览器| 2.48％|
