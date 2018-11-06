@@ -28,13 +28,13 @@ Chrome代码是基于其他开放源代码软件所编写，包括Apple WebKit�
 
 Chrome的相应开源项目称为Chromium，Chromium作为Google的一个巨大项目，有超过10 GB的源代码。 经过10年的发展，Chromium并不是一个纯粹的网络浏览器项目。它提供了多种扩展机制，包括标准Chrome扩展，Native Messaging，WebAssembly。 一些衍生项目包括CEF和Electron。 它用于创建更多创意应用程序。 Web和Local之间的界限逐渐被打破。
 
-而我们的chrome.net就是桌面应用和chrome优势的一种集成。chrome.net的目标以chrome为范例，利用tangram技术，为大家展示如何将web与原生桌面应用相结合，提供一种web与原生桌面元素相结合的技术，使web技术可以和原生桌面元素进行多元化组合。
+而我们的chrome.net就是桌面应用和chrome优势的一种集成。chrome.net的目标以chrome为范例，利用tangram技术体系，为大家展示如何将web与原生桌面应用相结合，其中原生桌面应用元素包括：com，.NET, java。
 
 chrome.net目前可以实现以下效果：
 图图图
 
 - 支持从图形界面角度扩展chrome，可将chrome原网页扩展为多种样式，如下图：各种格的图
-- 在chrome窗口中支持加载.net组件
+- 在chrome窗口中支持加载.net组件(后续会拓展其他桌面应用组件)
 - 支持.net组件和chrome之间数据交互
 
 在以下部分中，我们将介绍如何使用tangram扩展Chromium。如果您只想体验效果并且不想花时间编译Chromium（大约需要2-3天），那么您可以从我们的网站下载我们的预编译分发包（这地方给链接）。
@@ -57,13 +57,12 @@ chrome.net目前可以实现以下效果：
 - Windows 10
            
 3. 一个6人团队开发的合理配置：
-- 4台服务器 
-- 6台个人电脑 
-- 每台配置都如2所述 
+- 10台服务器 
+- 6台个人电脑，每台电脑配置都如2上述
        
 ## 开发环境
   
-### Visual Studio 2017
+1. Visual Studio 2017
 - add .NET desktop development
    - add Visual C++ ATL for x86 and x64
    - add Visual C++ MFC for x86 and x64
@@ -72,14 +71,15 @@ chrome.net目前可以实现以下效果：
 - add Visual Studio extension development
 - add Microsoft.VisualStudio.Component.VC.140
 
-### depot_tools
-### Python 2.7 for Windows
-### Git for Windows
-### 网络代理配置
+2. depot_tools
+3. Python 2.7 for Windows
+4. Git for Windows
+5. 网络代理配置
 若您所在地区无法连接chromium源码地址，则需要提前处理网络代理问题，若您不想处理此部分，中国区用户可从连接地址获取chromium源码。
 
-### 特别提示
-由于chromium源码的体积太大，首次下载源码和编译都需要很长的时间（一般配置的话在20小时左右），建议大家将下载和编译都放在晚上睡觉前或周末不用电脑时进行。
+> 特别提示
+
+> 由于chromium源码的体积太大，首次下载源码和编译都需要很长的时间（一般配置的话在20小时左右），建议大家将下载和编译都放在晚上睡觉前或周末不用电脑时进行。
 
 下面是我们在工作中不同设备的时长统计，供大家参考.
 
